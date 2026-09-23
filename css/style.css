@@ -1,0 +1,434 @@
+/* 
+   ======================================================================== 
+   RESERVATION SYSTEM MODERN UI - PREMIUM STYLES
+   ======================================================================== 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Color Variables */
+:root {
+    --primary-color: #132ea4;
+    --primary-hover: #3a0ca3;
+    --secondary-color: #f72585;
+    --accent-color: #4cc9f0;
+    --bg-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-primary: #2b2d42;
+    --text-secondary: #6c757d;
+    --success: #018d5e;
+    --danger: #ef476f;
+    --border-color: #e9ecef;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+/* ------------------------------------------------------------------------
+   Navigation 
+   ------------------------------------------------------------------------ */
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.bg-dark {
+    background: rgba(33, 37, 41, 0.95) !important;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+    letter-spacing: -0.03em;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar.bg-dark .navbar-brand {
+    background: linear-gradient(45deg, #fff, var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 0 0.2rem;
+}
+
+.navbar.bg-dark .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(67, 97, 238, 0.05);
+    /* very light primary */
+    transform: translateY(-1px);
+}
+
+.navbar.bg-dark .nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.text-warning.fw-bold {
+    color: #ffd166 !important;
+}
+
+.nav-link.text-warning.fw-bold:hover {
+    background-color: rgba(255, 209, 102, 0.1) !important;
+}
+
+
+/* ------------------------------------------------------------------------
+   Cards & Containers
+   ------------------------------------------------------------------------ */
+.card {
+    background: var(--surface-color);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+.card h3,
+.card h2 {
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------
+   Hero Section
+   ------------------------------------------------------------------------ */
+.hero-section {
+    background: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.8)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+    color: white;
+    padding: 55px 40px 50px;
+    text-align: center;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(67, 97, 238, 0.2) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.hero-section>* {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.hero-section .btn-primary {
+    background: #5A74FF;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    font-size: 1.05rem;
+    letter-spacing: 0;
+}
+
+.hero-section .btn-primary:hover {
+    background: #4B63EB;
+}
+
+/* ------------------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------------------ */
+.btn {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+    border: none;
+    box-shadow: none !important;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn:active {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-success {
+    background-color: var(--success) !important;
+    color: white !important;
+    border-color: var(--success) !important;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: #01724c !important; /* Slightly darker than #018d5e */
+    border-color: #01724c !important;
+    color: white !important;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #e11d48;
+    color: white;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+
+/* ------------------------------------------------------------------------
+   Forms & Inputs
+   ------------------------------------------------------------------------ */
+.form-control {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+}
+
+.form-label,
+label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* ------------------------------------------------------------------------
+   Tables / GridViews
+   ------------------------------------------------------------------------ */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2rem;
+}
+
+.table th,
+.table td {
+    padding: 1rem 1.2rem;
+    vertical-align: middle;
+    border-top: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table thead th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Status Colors used in tables */
+td:contains('Confirmed') {
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------------ */
+footer {
+    background: #0f172a !important;
+    /* Rich dark color */
+    color: #94a3b8 !important;
+    padding: 2rem 0 !important;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+/* Utilities */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.min-vh-100 {
+    min-height: calc(100vh - 200px) !important;
+    /* Adjust for navbar and footer */
+}
+
+/* Small alert styling */
+.alert {
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-info {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Center elements perfectly visually */
+h2.text-center {
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------------
+   GridView Inline Edit Row
+   ------------------------------------------------------------------------ */
+tr.table-edit-row td {
+    padding: 0.6rem 0.8rem !important;
+    vertical-align: middle !important;
+    background-color: #fffbeb !important;
+}
+
+/* Edit-mode text inputs */
+.edit-input {
+    min-width: 100px;
+    font-size: 0.85rem !important;
+    padding: 0.3rem 0.5rem !important;
+    border-radius: 6px !important;
+    border: 1px solid #d1d5db !important;
+}
+
+/* Narrower numeric inputs (Seats, Price) */
+.edit-input-sm {
+    max-width: 80px;
+}
+
+/* Update / Cancel buttons in edit row */
+tr.table-edit-row td {
+    padding: 0.6rem 0.8rem !important;
+    vertical-align: middle !important;
+    background-color: #fffbeb !important;
+}
+
+/* Action cell — make buttons side by side */
+.table td:last-child,
+.table th:last-child {
+    white-space: nowrap;
+    text-align: center;
+    width: 1%;   /* shrink to content */
+}
+
+/* Uniform action buttons (Edit, Save, Delete) */
+.grid-action-btn {
+    display: inline-block !important;
+    min-width: 62px !important;
+    text-align: center !important;
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    margin: 0 2px !important;
+    vertical-align: middle !important;
+}
